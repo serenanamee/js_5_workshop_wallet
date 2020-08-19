@@ -5,3 +5,18 @@ function initData(){
   localStorage.setItem('records',JSON.stringify(sampleData) )
 }
 
+
+let form = document.form[0]
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+  console.log(
+    {
+      category: form.elements["category"].value,
+      date: form.elements["date"].value,
+      amount: form.elements["amount"].value,
+      description: form.elements["description"].valiue,
+    }
+  )
+})
+
